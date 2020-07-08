@@ -1,0 +1,28 @@
+.info__logo {
+    width: 40px;
+    height: 40px;
+
+}
+
+@media(min-width:320px){
+    .info__logo{
+        width: 40px;
+        height: 40px;
+    }
+    .info__logonosotros {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media(min-width:380px){
+    .info__logo{
+        width: 40px;
+        height: 40px;
+    }
+    .info__logonosotros {
+        width: 40px;
+        height: 40px;
+    }
+}
+

@@ -1,0 +1,121 @@
+.completo{
+    position: relative;
+    top: 8%;
+    margin: 0;  /*sube hacia arriba*/
+    padding: 0; /*lo pega todo a al margen*/
+    list-style: none ;
+    text-decoration: none;
+
+}
+.sidebarper{
+    position: fixed;
+    z-index: 1;
+    right: -250px; /*decide la ubicacion derecha o izquierda|| arranca con 0 para que veas la ubicacion inicial*/
+    width: 250px;
+    height: 100%;
+    background: #212121; /*el color del rectangulo*/
+    transition: all .5s ease;
+    word-wrap: break-word;
+}
+
+/*.sidebarper header { sidebarper header, lo que esta adentro del sidebarper
+font-size: 18px; tamaño de letra
+color: white;
+text-align: center;
+line-height: 70px; posicion del elemento header con respecto al rectangulo en la zona del header 
+background: #212121; color de la zona del header
+user-select: none; no se selecciona el header
+
+}
+*/
+
+.sidebarper ul a{ /*accedemos al ul y a los a*/
+    display: block;
+    height: 56px;
+    line-height: 56px; /*espacio entre lineas*/
+    font-size: 12px;
+    color: white;
+    padding-left: 20px; /*distancia de las letras hasta el margen*/
+    box-sizing: border-box; /*convierte en caja cada elemento*/
+    border-top: 1px solid rgba(255,255,255,.1); /*bordes de caja caja de texto*/
+    border-bottom: 1px solid black; /*le da borde de boton a cada caja*/
+
+transition: .6s; /*tiempo de la transicioon al moverse*/
+
+}
+
+ul li:hover a{ /*los elementos del ul y del a cuando sombrees con el mouse*/
+   
+    padding-left: 20px; /*al pasar mouse se mueva con respecto al margen*/
+
+}
+
+.sidebarper ul li a svg  { /*elemtos del sidebarper, entra al ul, al a y al i */
+    margin-right: 15px; /*distancia de los iconos respecto al margen*/
+    font-size: .8rem;
+    
+
+}
+#cuadraditocheck{ /*cuadradito check q se convierte en menu*/
+    display: none; /*lo escondemos*/
+    
+}
+label #boton,label #cancel{ /*accedemos al boton y al cancel adentro del label*/
+    position: absolute; /*posicion del check atras de todo */
+    margin-right: 55px;
+    width:30px ;
+    height:30px ;
+   
+    cursor: pointer;
+    background: #fdf9f9; /*color del menu y boton*/
+    word-wrap: break-word;
+}
+
+label #boton{
+    position: fixed;
+    z-index: 1111;
+    right: -54.5px;
+    top: 90px;
+    font-size: 35px;
+    color: #0a5275;
+    padding:6px 12px; /*tamaño*/
+    transition: all .6s; /*desaparicion del boton*/
+    
+
+}
+label #cancel{  /*el check*/
+    
+right: -54.5px;  /*distancia con respecto al margen del boton cancelar*/
+top: 90px;  /*posicion vertical*/
+font-size: 30px;  /*tamaño del check*/
+color: #0a5275;   /*color*/
+padding: 4px 9px;   /*tamaño del elemento completo*/
+border-radius: 20px;
+transition: all .6s ease;
+word-wrap: break-word;
+
+}
+#cuadraditocheck:checked ~.sidebarper{ /*el check, checked=al hacerle click, adentro del elemento sidebarper*/
+
+    right:0; /*al hacer click en menu, se despliega. funciona e checked*/
+  
+
+}
+#cuadraditocheck:checked ~label #boton{ /*el check, checked=al hacerle click, adentro del label apretando el boton para abrir*/
+
+    right: 150px; /*distancia del boton al margen al hacer click*/
+     opacity: 0; /*al ser clickado lo opacamos y desaparecemos*/
+     pointer-events: none;
+     
+}
+#cuadraditocheck:checked ~label #cancel{ /*el check, checked=al hacerle click, adentro del label apretando el boton para cancelar*/
+    position: fixed;
+    z-index: 1111;
+    right: 160px;
+    
+}
+.segundo{
+    position: fixed;
+    z-index: 1500;
+}
+
